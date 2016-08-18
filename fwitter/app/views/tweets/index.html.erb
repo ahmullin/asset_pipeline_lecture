@@ -1,0 +1,5 @@
+<h1>ALL OF THE TWEETS...ALL</h1>
+
+<% @tweets.each do |tweet| %>
+  <%= link_to "#{tweet.user.username} says #{tweet.content}", tweet_path(tweet)%>
+<% end %>

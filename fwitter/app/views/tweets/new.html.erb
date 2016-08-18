@@ -1,0 +1,13 @@
+<h1>MAKE A TWEET...GO AHEAD, MAKE ONE</h1>
+
+<%= form_tag tweets_path do %>
+  <%= text_field_tag :content, "", placeholder: 'Content'%>
+  <%= text_field_tag :user_id %>
+  <%= submit_tag %>
+<% end %>
+
+<!-- <form method="POST" action='/tweets'>
+  <input type="text" placeholder='content'>
+  <input type="text" placeholder='user_id'>
+  <input type="submit" value="MAKE A TWEET">
+</form> -->
