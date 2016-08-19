@@ -2,3 +2,5 @@
 
 <h2><%= @tweet.user.username %></h2>
 <h3><%= @tweet.content %></h3>
+
+<%= link_to 'Edit This Tweet', edit_tweet_path(@tweet) %>

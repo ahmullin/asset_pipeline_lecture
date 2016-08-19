@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
   end
 
   def new
-
+    @tweet = Tweet.new
   end
 
   def create
@@ -24,7 +24,10 @@ class TweetsController < ApplicationController
   end
 
   def update
-    tweet = Tweet.update(content: params[:content], user_id: params[:user_id])
-    redirect_to tweet_path(tweet)
+    @tweet = Tweet.find(params[:id])
+    @tweet.update(content: params[:content], user_id: params[:user_id])
+    redirect_to tweet_path(@tweet)
   end
+
+
 end
