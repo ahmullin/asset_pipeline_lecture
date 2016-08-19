@@ -1,0 +1,9 @@
+<%= title %>
+
+<%= form_for(tweet) do |f| %>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <%= f.label :user_id %>
+  <%= f.text_field :user_id %>
+  <%= f.submit %>
+<% end %>
