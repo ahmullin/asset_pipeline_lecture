@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// Phase 1
+// $(document).ready(function(){
+//   $("div#tweetContent").on("mouseover", function(e){
+//     window.alert("Hey! Staaaap")
+//   })
+// })

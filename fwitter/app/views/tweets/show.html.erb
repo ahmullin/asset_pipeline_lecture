@@ -1,6 +1,12 @@
+<div id="allTweets">
 <h1>ONE TWEET...JUST ONE...</h1>
 
-<h2><%= @tweet.user.username %></h2>
-<h3><%= @tweet.content %></h3>
+  <div id="tweet">
 
+    <div id="tweetUser"><%#= @tweet.user.username %></div>
+
+    <div id="tweetContent"><p><%= @tweet.content %></p></div>
+
+  </div>
 <%= link_to 'Edit This Tweet', edit_tweet_path(@tweet) %>
+</div>

@@ -3,7 +3,8 @@
 <ul>
   <% @tweets.each do |tweet| %>
     <li>
-      <%= link_to "#{tweet.user.username} says #{tweet.content}", tweet_path(tweet)%>
+      <%#= link_to "#{tweet.user.username} says #{tweet.content}", tweet_path(tweet)%>
+      <%= "#{tweet.content}"%>
     </li>
   <% end %>
 </ul>
