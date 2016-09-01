@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+
   resources :tweets, except: [:destroy]
+  resources :users
+  resources :sessions
+  get 'signin', to: 'sessions#new'
+  get 'signup', to: 'registration#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

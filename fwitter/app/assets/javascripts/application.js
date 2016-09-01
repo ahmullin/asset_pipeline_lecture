@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
-// Phase 1
+// Step 4
 // $(document).ready(function(){
 //   $("div#tweetContent").on("mouseover", function(e){
 //     window.alert("Hey! Staaaap")

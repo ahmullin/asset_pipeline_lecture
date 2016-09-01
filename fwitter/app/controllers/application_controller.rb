@@ -16,6 +16,14 @@ class ApplicationController < ActionController::Base
   #   html_string << yield(form_builder)
   # end
 
+  def current_user
+    @current_user ||= User.find_by(session[:user_id])
+  end
+
+  def logged_in?
+    !!current_user
+  end
+
 end
 
 

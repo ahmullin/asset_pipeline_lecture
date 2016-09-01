@@ -1,4 +1,4 @@
-#allTweets{
+#allUsersTweets{
   background: rgb(215, 218, 220);
   background-image: initial;
   background-position-x: initial;
@@ -24,7 +24,7 @@
     border-bottom-left-radius: 6px;
 }
 
-#tweet{
+#usersTweet{
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   display: block;
   background-color: rgb(255, 255, 255);
@@ -42,6 +42,15 @@
       cursor: pointer;
 }
 
-#tweetContent{
-  color: #ff0000;
+#usersTweetContent{
+  color: rgb(53,65,174);
+}
+
+#tweetUsername{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#editUserTweet{
+  font-size: 12px;
 }
