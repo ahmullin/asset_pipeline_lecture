@@ -10,14 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
-
-// Step 4
-// $(document).ready(function(){
-//   $("div#tweetContent").on("mouseover", function(e){
-//     window.alert("Hey! Staaaap")
-//   })
-// })
+// require jquery
+// require jquery_ujs
+// require turbolinks
+// require_tree .
