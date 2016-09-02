@@ -14,5 +14,6 @@
  *= require twitter
  *= require_tree .
  */
-
-// @import "bootstap-sass";
+ 
+@import "bootstrap-sprockets";
+@import "bootstrap";

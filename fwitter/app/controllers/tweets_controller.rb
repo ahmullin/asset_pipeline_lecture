@@ -4,6 +4,7 @@ class TweetsController < ApplicationController
   # GET '/tweets', goes to tweets_controller index and displays all of the tweets
   def index
     @tweets = Tweet.all
+    @tweet = Tweet.new
   end
 
   def show
@@ -17,10 +18,13 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     @tweet.user = current_user
-    if @tweet.save
-      redirect_to tweet_path(@tweet)
-    else
-      render 'new'
+    respond_to do |f|
+      if @tweet.save
+        f.html { redirect_to tweet_path(@tweet) }
+        f.json { render json: { content: @tweet.content, id: @tweet.id  } }
+      else
+        render 'new'
+      end
     end
   end
 
@@ -37,7 +41,7 @@ class TweetsController < ApplicationController
   private
 
   def tweet_params
-    params.require(:tweet).permit(:content, :user_id)
+    params.require(:tweet).permit(:content)
   end
 
 end
