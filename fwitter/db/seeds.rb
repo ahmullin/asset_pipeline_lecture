@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+@user = User.create(username: Faker::GameOfThrones.house, password: "I always pay my debt")
+
+10.times do
+  Tweet.create(content: Faker::ChuckNorris.fact, user_id: @user.id)
+end
